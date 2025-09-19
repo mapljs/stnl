@@ -1,4 +1,3 @@
-import type { MiddlewareTypes } from '@mapl/web/core/middleware';
 import {
   compileErrorHandler,
   createAsyncScope,
@@ -7,12 +6,11 @@ import {
 } from '@mapl/framework';
 import { layer } from '@mapl/web';
 import { CTX, REQ, TMP } from '@mapl/web/constants';
-
-import { code } from 'stnl/build/json/assert';
-import type { t } from 'stnl';
-
-import { isHydrating } from 'runtime-compiler/config';
+import type { MiddlewareTypes } from '@mapl/web/core/middleware';
 import { injectDependency, injectExternalDependency } from 'runtime-compiler';
+import { isHydrating } from 'runtime-compiler/config';
+import type { t } from 'stnl';
+import { code } from 'stnl/build/json/assert';
 
 import { bodyErr } from './index.ts';
 
@@ -29,7 +27,7 @@ export const json: <const N extends string, T extends t.TLoadedType>(
       layer.macro((scope) => {
         createAsyncScope(scope);
         setTmp(scope);
-        compileErrorHandler(scope);
+        compileErrorHandler('', scope);
         createContext(scope);
         return '';
       })
@@ -45,11 +43,7 @@ export const json: <const N extends string, T extends t.TLoadedType>(
           '(' +
           TMP +
           ')){' +
-          TMP +
-          '=' +
-          ERROR_DEP +
-          ';' +
-          compileErrorHandler(scope) +
+          compileErrorHandler(ERROR_DEP, scope) +
           '}' +
           createContext(scope) +
           CTX +

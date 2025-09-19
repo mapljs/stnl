@@ -1,4 +1,4 @@
-import { taggedErr, type Err, type TaggedErr } from '@safe-std/error';
+import { type Err, type TaggedErr, taggedErr } from '@safe-std/error';
 
 const parserTag: unique symbol = Symbol();
 export const parserErr: <P>(payload: P) => TaggedErr<typeof parserTag, P> =

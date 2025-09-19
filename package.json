@@ -1,7 +1,7 @@
 {
   "name": "@mapl/stnl",
-  "version": "0.0.2",
-  "description": "stnl validators for @mapl/web",
+  "version": "0.0.3",
+  "description": "body validators for @mapl/web",
   "keywords": [],
   "repository": {},
   "license": "MIT",
