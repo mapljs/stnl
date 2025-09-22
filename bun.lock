@@ -4,7 +4,7 @@
     "": {
       "name": "stnl",
       "dependencies": {
-        "@mapl/framework": "^0.4.9",
+        "runtime-compiler": "^1.2.0",
       },
       "devDependencies": {
         "@biomejs/biome": "2.1.4",
@@ -16,8 +16,8 @@
         "typescript": "^5.9.2",
       },
       "peerDependencies": {
+        "@mapl/framework": "^0.4.9",
         "@mapl/web": "^0.2.0",
-        "runtime-compiler": "^1.0.12",
         "stnl": "^1.2.3",
       },
     },
@@ -122,7 +122,7 @@
 
     "oxc-transform": ["oxc-transform@0.65.0", "", { "optionalDependencies": { "@oxc-transform/binding-darwin-arm64": "0.65.0", "@oxc-transform/binding-darwin-x64": "0.65.0", "@oxc-transform/binding-linux-arm-gnueabihf": "0.65.0", "@oxc-transform/binding-linux-arm64-gnu": "0.65.0", "@oxc-transform/binding-linux-arm64-musl": "0.65.0", "@oxc-transform/binding-linux-x64-gnu": "0.65.0", "@oxc-transform/binding-linux-x64-musl": "0.65.0", "@oxc-transform/binding-wasm32-wasi": "0.65.0", "@oxc-transform/binding-win32-arm64-msvc": "0.65.0", "@oxc-transform/binding-win32-x64-msvc": "0.65.0" } }, "sha512-TWAMi8zVvORQw545O1/1irpbMPDQGD6ernen5QyY5PCL9nj3RqgR1ULlQiHVDXEl2rW+OtHF8KS0ItAUyOfQ+Q=="],
 
-    "runtime-compiler": ["runtime-compiler@1.0.12", "", {}, "sha512-bXjk8uZ0g/CnBUKBtI5Kp0b43FF8ofs7k5AhdpEcxT2RXyao/YTL9MK8oF9Zf73KgZ7PUjvEBxs6Em7MFNLqjA=="],
+    "runtime-compiler": ["runtime-compiler@1.2.0", "", {}, "sha512-uUjglXEus5/FZN3VUbm6pq0U9wJfRvvSkWsdEYX5hOPAiYENFdRZCW2ZPjXPmvzU1OiBK3jI1h60DVxT+0coNw=="],
 
     "secure-headers": ["secure-headers@0.0.6", "", {}, "sha512-veqhRYclrmi4T0HpCA8xZRF9tMuIdTlQ4IwZNh9S26nYfHOaNPD3ouw4qbsABZr/lNV8LRBQidRRq3MKqszBUw=="],
 
