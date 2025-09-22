@@ -1,6 +1,6 @@
 {
   "name": "@mapl/stnl",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "body validators for @mapl/web",
   "keywords": [],
   "repository": {},
@@ -27,6 +27,8 @@
   ],
   "peerDependencies": {
     "@mapl/web": "^0.2.0",
-    "stnl": "^1.2.3"
+    "stnl": "^1.2.3",
+    "runtime-compiler": "^1.0.12",
+    "@mapl/framework": "^0.4.9"
   }
 }

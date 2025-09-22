@@ -7,7 +7,7 @@ import {
 import { layer } from '@mapl/web';
 import { CTX, REQ, TMP } from '@mapl/web/constants';
 import type { MiddlewareTypes } from '@mapl/web/core/middleware';
-import { injectDependency, injectExternalDependency } from 'runtime-compiler';
+import { injectDependency, injectPersistentDependency } from 'runtime-compiler';
 import { isHydrating } from 'runtime-compiler/config';
 import type { t } from 'stnl';
 import { code } from 'stnl/build/json/assert';
@@ -17,7 +17,7 @@ import { bodyErr } from './index.ts';
 /**
  * Body error external dependency name
  */
-export const ERROR_DEP: string = injectExternalDependency(bodyErr);
+export const ERROR_DEP: string = injectPersistentDependency(bodyErr);
 
 export const json: <const N extends string, T extends t.TLoadedType>(
   name: N,
