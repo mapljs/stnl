@@ -8,7 +8,7 @@ import { layer } from '@mapl/web';
 import { CTX, REQ, TMP } from '@mapl/web/constants';
 import type { MiddlewareTypes } from '@mapl/web/core/middleware';
 
-import { injectDependency, injectExternalDependency } from 'runtime-compiler';
+import { injectDependency, injectExternalDependency, lazyDependency } from 'runtime-compiler';
 import { isHydrating } from 'runtime-compiler/config';
 
 import type { t } from 'stnl';
@@ -19,28 +19,22 @@ import { bodyErr } from './index.ts';
 /**
  * Body error external dependency name
  */
-export let ERROR_DEP: string;
-
-export const setup = (): void => {
-  ERROR_DEP ??= injectExternalDependency(bodyErr);
-};
+export const ERROR_DEP: () => string = lazyDependency(injectExternalDependency, bodyErr);
 
 export const json: <const N extends string, T extends t.TLoadedType>(
   name: N,
   schema: T,
 ) => MiddlewareTypes<typeof bodyErr, Record<N, t.TInfer<T>>> = isHydrating
-  ? () => (
-      setup(),
+  ? () =>
       layer.macro((scope) => {
         createAsyncScope(scope);
         setTmp(scope);
+        ERROR_DEP();
         compileErrorHandler('', scope);
         createContext(scope);
         return '';
       })
-    )
-  : (name, schema) => (
-      setup(),
+  : (name, schema) =>
       layer.macro(
         (scope) =>
           createAsyncScope(scope) +
@@ -52,7 +46,7 @@ export const json: <const N extends string, T extends t.TLoadedType>(
           '(' +
           TMP +
           ')){' +
-          compileErrorHandler(ERROR_DEP, scope) +
+          compileErrorHandler(ERROR_DEP(), scope) +
           '}' +
           createContext(scope) +
           CTX +
@@ -61,5 +55,4 @@ export const json: <const N extends string, T extends t.TLoadedType>(
           '=' +
           TMP +
           ';',
-      )
-    );
+      );

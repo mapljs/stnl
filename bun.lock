@@ -4,7 +4,8 @@
     "": {
       "name": "stnl",
       "dependencies": {
-        "runtime-compiler": "^1.2.0",
+        "@mapl/framework": "^0.5.2",
+        "runtime-compiler": "^1.2.3",
       },
       "devDependencies": {
         "@biomejs/biome": "2.1.4",
@@ -16,7 +17,6 @@
         "typescript": "^5.9.2",
       },
       "peerDependencies": {
-        "@mapl/framework": "^0.4.9",
         "@mapl/web": "^0.2.0",
         "stnl": "^1.2.3",
       },
@@ -50,7 +50,7 @@
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.1.0", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-WI0DdZ8xFSbgMjR1sFsKABJ/C5OnRrjT06JXbZKexJGrDuPTzZdDYfFlsgcCXCyf+suG5QU2e/y1Wo2V/OapLQ=="],
 
-    "@mapl/framework": ["@mapl/framework@0.4.9", "", { "peerDependencies": { "runtime-compiler": "^1.0.12" } }, "sha512-wqNfT78YrKG8A62VGIGtJclYRnQZrSQ2sOjcz6k4L/Q1Qra2YPOoosycfC4hbXK+RILvQXkccVAMI/0X1wXAuw=="],
+    "@mapl/framework": ["@mapl/framework@0.5.2", "", { "peerDependencies": { "runtime-compiler": "^1.2.2" } }, "sha512-lUVy2Wyl81v6J6k83mTOZZezzZw0+BU3h7OHcdMuuOXYvfq9apKTm94egHdf7+AJetfprSfAbqwHMaF6nO57+Q=="],
 
     "@mapl/router": ["@mapl/router@0.6.2", "", {}, "sha512-qzGQnuVeapwNZxRcAH9zB4+cr3Q1AOLHjyhqeMVBfeJB6lYly2LHf7UsNEnT4KX4/KcxdNK7Te3ka/s327tmow=="],
 
@@ -122,7 +122,7 @@
 
     "oxc-transform": ["oxc-transform@0.65.0", "", { "optionalDependencies": { "@oxc-transform/binding-darwin-arm64": "0.65.0", "@oxc-transform/binding-darwin-x64": "0.65.0", "@oxc-transform/binding-linux-arm-gnueabihf": "0.65.0", "@oxc-transform/binding-linux-arm64-gnu": "0.65.0", "@oxc-transform/binding-linux-arm64-musl": "0.65.0", "@oxc-transform/binding-linux-x64-gnu": "0.65.0", "@oxc-transform/binding-linux-x64-musl": "0.65.0", "@oxc-transform/binding-wasm32-wasi": "0.65.0", "@oxc-transform/binding-win32-arm64-msvc": "0.65.0", "@oxc-transform/binding-win32-x64-msvc": "0.65.0" } }, "sha512-TWAMi8zVvORQw545O1/1irpbMPDQGD6ernen5QyY5PCL9nj3RqgR1ULlQiHVDXEl2rW+OtHF8KS0ItAUyOfQ+Q=="],
 
-    "runtime-compiler": ["runtime-compiler@1.2.0", "", {}, "sha512-uUjglXEus5/FZN3VUbm6pq0U9wJfRvvSkWsdEYX5hOPAiYENFdRZCW2ZPjXPmvzU1OiBK3jI1h60DVxT+0coNw=="],
+    "runtime-compiler": ["runtime-compiler@1.2.3", "", {}, "sha512-BzXy8W86c6jw+YXsP/RFCCiZlvh6UVjuiRicOFBfkkBWpS2IY/WYsECyiUEAaMkcOYMd9RQ7RfKeKW2jJCYz1g=="],
 
     "secure-headers": ["secure-headers@0.0.6", "", {}, "sha512-veqhRYclrmi4T0HpCA8xZRF9tMuIdTlQ4IwZNh9S26nYfHOaNPD3ouw4qbsABZr/lNV8LRBQidRRq3MKqszBUw=="],
 
