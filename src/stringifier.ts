@@ -8,7 +8,7 @@ import { noOp } from 'runtime-compiler';
 import { isHydrating } from 'runtime-compiler/config';
 
 import type { t } from 'stnl';
-import build from 'stnl/build/json/stringify-jit';
+import build from 'stnl/build/json/stringify.rt';
 
 export const json: <T extends t.TLoadedType>(
   schema: T,
