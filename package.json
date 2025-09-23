@@ -1,6 +1,6 @@
 {
   "name": "@mapl/stnl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "body validators for @mapl/web",
   "keywords": [],
   "repository": {},
@@ -26,9 +26,9 @@
     "@biomejs/biome"
   ],
   "peerDependencies": {
-    "@mapl/web": "^0.2.0",
-    "stnl": "^1.2.3",
     "@mapl/framework": "^0.5.2",
-    "runtime-compiler": "^1.2.3"
+    "@mapl/web": "^0.3.0-beta.2",
+    "runtime-compiler": "^1.2.5",
+    "stnl": "^1.2.4"
   }
 }

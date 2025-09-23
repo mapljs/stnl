@@ -8,7 +8,11 @@ import { layer } from '@mapl/web';
 import { CTX, REQ, TMP } from '@mapl/web/constants';
 import type { MiddlewareTypes } from '@mapl/web/core/middleware';
 
-import { injectDependency, injectExternalDependency, lazyDependency } from 'runtime-compiler';
+import {
+  injectDependency,
+  injectExternalDependency,
+  lazyDependency,
+} from 'runtime-compiler';
 import { isHydrating } from 'runtime-compiler/config';
 
 import type { t } from 'stnl';
@@ -19,7 +23,10 @@ import { bodyErr } from './index.ts';
 /**
  * Body error external dependency name
  */
-export const ERROR_DEP: () => string = lazyDependency(injectExternalDependency, bodyErr);
+export const ERROR_DEP: () => string = lazyDependency(
+  injectExternalDependency,
+  bodyErr,
+);
 
 export const json: <const N extends string, T extends t.TLoadedType>(
   name: N,
